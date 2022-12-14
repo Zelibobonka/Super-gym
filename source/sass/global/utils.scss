@@ -1,3 +1,15 @@
+:root {
+  --side-offset: calc(50vw - 580px - var(--scrollbarWidth, 0px) * 0.5);
+
+  @media (max-width: $vp-1249) {
+    --side-offset: 45px;
+  }
+
+  @media (max-width: $vp-767) {
+    --side-offset: 15px;
+  }
+}
+
 .wrapper {
   position: relative;
 
@@ -15,14 +27,6 @@
   main {
     flex-grow: 1;
   }
-}
-
-.rouble {
-  font-family: $ff-rouble;
-  /* stylelint-disable */
-  text-transform: lowercase !important;
-  font-weight: 400 !important;
-  /* stylelint-enable */
 }
 
 .visually-hidden {
@@ -59,9 +63,4 @@
   &::-webkit-scrollbar {
     display: none;
   }
-}
-
-.no-transition {
-  /* stylelint-disable-next-line */
-  transition: none !important;
 }

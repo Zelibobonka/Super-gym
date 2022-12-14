@@ -1,118 +1,56 @@
-@mixin retina {
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    @content;
+// Title
+
+@mixin title-medium ($desktop, $tablet, $mobile) {
+  margin: 0;
+  margin-bottom: $desktop;
+  font-family: $ff-alumni-sans;
+  font-size: 48px;
+  line-height: 100%;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+
+  @media (max-width: $vp-1199) {
+    margin-bottom: $tablet;
+    font-size: 42px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-bottom: $mobile;
+    font-size: 32px;
   }
 }
 
-@mixin hover {
-  @media (hover: hover) {
-    &:hover:not(.focus-visible) {
-      @content;
-    }
+@mixin title-small ($desktop, $tablet, $mobile) {
+  margin: 0;
+  margin-bottom: $desktop;
+  font-size: 26px;
+  line-height: 100%;
+  font-weight: 700;
+
+  @media (max-width: $vp-1199) {
+    margin-bottom: $tablet;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-bottom: $mobile;
+    font-size: 22px;
   }
 }
 
-@mixin focus {
-  &.focus-visible:focus {
-    @content;
+// Description
+
+@mixin description ($desktop, $tablet, $mobile) {
+  margin: 0;
+  margin-bottom: $desktop;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 300;
+
+  @media (max-width: $vp-1023) {
+    margin-bottom: $tablet;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-bottom: $mobile;
   }
 }
-
-@mixin active {
-  &.focus-visible:active {
-    @content;
-  }
-}
-
-@mixin hover-focus {
-  @media (hover: hover) {
-    &:hover:not(.focus-visible) {
-      @content;
-    }
-  }
-
-  &.focus-visible:focus {
-    @content;
-  }
-}
-
-// Desktop first
-
-@mixin vp-1919 {
-  @media (max-width: ($vp-1920 - 1px)) {
-    @content;
-  }
-}
-
-@mixin vp-1439 {
-  @media (max-width: ($vp-1440 - 1px)) {
-    @content;
-  }
-}
-
-@mixin vp-1279 {
-  @media (max-width: ($vp-1280 - 1px)) {
-    @content;
-  }
-}
-
-@mixin vp-1023 {
-  @media (max-width: ($vp-1024 - 1px)) {
-    @content;
-  }
-}
-
-@mixin vp-767 {
-  @media (max-width: ($vp-768 - 1px)) {
-    @content;
-  }
-}
-
-@mixin vp-374 {
-  @media (max-width: ($vp-375 - 1px)) {
-    @content;
-  }
-}
-
-// Mobile first
-
-// @mixin vp-375 {
-//   @media (min-width: $vp-375) {
-//     @content;
-//   }
-// }
-
-// @mixin vp-768 {
-//   @media (min-width: $vp-768) {
-//     @content;
-//   }
-// }
-
-// @mixin vp-1024 {
-//   @media (min-width: $vp-1024) {
-//     @content;
-//   }
-// }
-
-// @mixin vp-1280 {
-//   @media (min-width: $vp-1280) {
-//     @content;
-//   }
-// }
-
-// @mixin vp-1440 {
-//   @media (min-width: $vp-1440) {
-//     @content;
-//   }
-// }
-
-// @mixin vp-1920 {
-//   @media (min-width: $vp-1920) {
-//     @content;
-//   }
-// }
-
-// ---------------------------------
-
-// не нужно добавлять свои миксины для ресета списков, обнуления кнопок и прочие
-// этим вы усложняете работу команды, проверку вашего кода и будущую поддержку проекта
