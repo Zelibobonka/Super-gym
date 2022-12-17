@@ -1,3 +1,67 @@
 .intro {
-  background-image: conic-gradient(from -0.05turn at 15% 30%, #b80027 25%, #003d85, #b80027);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 64px;
+  min-height: 658px;
+  padding: 51px calc(var(--side-offset) + 200px) 51px calc(var(--side-offset) + 146px);
+  background: conic-gradient(from 130.31deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
+
+  @media (max-width: $vp-1199) {
+    padding: 82px var(--side-offset);
+  }
+
+  @media (max-width: $vp-767) {
+    display: block;
+    padding: 115px var(--side-offset) 80px;
+  }
+}
+
+.intro__text-holder {
+  position: relative;
+  text-align: end;
+  padding: 121px 0 0;
+
+  h1 {
+    margin: 0 0 80px;
+    font-family: $ff-alumni-sans;
+    font-size: 92px;
+    font-weight: 600;
+    color: $color-default-white;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  span {
+    display: block;
+    margin: 0 25px 25px 0;
+    font-family: $ff-alumni-sans;
+    font-size: 48px;
+    font-weight: 600;
+    color: $color-default-white;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  p {
+    position: absolute;
+    top: 300px;
+    left: -100px;
+    width: 113px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: $color-default-white;
+    text-align: right;
+  }
+}
+
+.intro__img {
+  @media (max-width: $vp-767) {
+    display: none;
+  }
+}
+
+.intro__btn {
+  color: $color-default-white;
+  outline: 4px solid $color-default-white;
 }

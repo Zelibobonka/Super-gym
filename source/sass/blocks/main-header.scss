@@ -1,3 +1,29 @@
 .main-header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px var(--side-offset);
 
+  @media (max-width: $vp-1199) {
+    padding: 40px var(--side-offset) 25px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding: 15px var(--side-offset);
+  }
+}
+
+.main-header__contact {
+  font-family: $ff-alumni-sans;
+  font-size: 26px;
+  font-weight: 700;
+  color: $color-default-white;
+  letter-spacing: 0.02em;
+
+  @media (max-width: $vp-1199) {
+    font-size: 24px;
+  }
 }

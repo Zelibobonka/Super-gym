@@ -1,0 +1,113 @@
+.advantages {
+  padding: 146px calc(var(--side-offset) + 61px) 10px;
+  background-color: $color-ghost-white;
+
+  @media (max-width: $vp-1199) {
+    padding: 100px var(--side-offset);
+  }
+
+  @media (max-width: $vp-767) {
+    padding: 70px 0;
+  }
+
+  h2 {
+    @include title-medium (55px, 60px, 60px);
+    text-align: center;
+  }
+}
+
+.advantages__wrapper {
+  position: relative;
+}
+
+.advantages__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 26vw;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.advantages__item {
+  display: grid;
+  grid-template-columns: min-content auto;
+  gap: 30px;
+  padding: 0 0 84px;
+
+  &:nth-child(odd) {
+    padding-left: 19px;
+  }
+
+  &--border {
+    padding: 82px 0;
+    border-top: 2px solid rgba(209, 10, 66, 0.2);
+  }
+}
+
+.advantages__count-holder {
+  p {
+    margin: 0;
+    font-size: 14px;
+    color: $color-persian-blue;
+  }
+}
+
+.advantages__count-text {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 71px;
+  font-weight: 700;
+  color: transparent;
+
+  &--first-gradient {
+    background: linear-gradient(127.61deg, #d10a42 0%, #0041ca 45.58%);
+    background-clip: text;
+  }
+
+  &--second-gradient {
+    background: linear-gradient(142.51deg, #d10a42 0%, #0041ca 87.33%);
+    background-clip: text;
+  }
+}
+
+.advantages__text-holder {
+  h3 {
+    @include title-small (20px, 20px, 20px);
+  }
+
+  p {
+    @include description (0, 0, 0);
+    line-height: 1.4;
+  }
+}
+
+.advantages__main {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  max-width: 240px;
+  padding: 60px 34px;
+  text-align: center;
+  background-color: $color-resolution-blue;
+  transform: translateX(-50%);
+
+  h3 {
+    margin-bottom: 50px;
+    font-size: 26px;
+    font-weight: 700;
+    color: $color-default-white;
+  }
+
+  b {
+    margin-bottom: 25px;
+    font-size: 74px;
+    font-weight: 700;
+    color: $color-default-white;
+  }
+
+  p {
+    @include description (10px, 10px, 10px);
+    color: $color-default-white;
+  }
+}

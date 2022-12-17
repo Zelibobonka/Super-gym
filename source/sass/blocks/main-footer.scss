@@ -1,0 +1,14 @@
+.main-footer {
+  display: grid;
+  grid-template-columns: 170px auto 170px;
+  padding: 41px var(--side-offset);
+  background-color: $color-black-russian;
+
+  @media (max-width: $vp-1199) {
+    padding: 45px (--side-offset);
+  }
+
+  @media (max-width: $vp-767) {
+    padding: 50px var(--side-offset);
+  }
+}

@@ -1,18 +1,22 @@
 .btn {
-  display: inline-flex;
-  padding: 10px 20px;
-
-  color: $color-default-white;
-
+  display: block;
+  width: 100%;
+  padding: 24px 20px;
+  font-family: $ff-alumni-sans;
+  font-size: 12px;
+  font-weight: 700;
+  color: $color-sapphire;
   background-color: transparent;
   border: none;
+  outline: 2px solid $color-sapphire;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   cursor: pointer;
 
   transition: opacity $trans-default;
 
   &:disabled {
     opacity: 0.5;
-
     pointer-events: none;
   }
 

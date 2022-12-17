@@ -1,0 +1,20 @@
+.logo {
+  font-family: $ff-alumni-sans;
+  font-size: 36px;
+  font-weight: 700;
+  color: $color-default-white;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+
+  @media (max-width: $vp-1199) {
+    font-size: 24px;
+  }
+
+  @media (max-width: $vp-767) {
+    font-size: 20px;
+  }
+
+  &--footer {
+    font-size: 26px;
+  }
+}

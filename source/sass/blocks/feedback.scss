@@ -1,0 +1,49 @@
+.feedback {
+  padding: 56px 170px 70px var(--side-offset);
+  background-color: $color-sapphire;
+
+  @media (max-width: $vp-1199) {
+    padding: 70px calc(var(--side-offset) + 50px) 70px calc(var(--side-offset) + 30px);
+  }
+
+  @media (max-width: $vp-767) {
+    padding: 70px var(--side-offset);
+  }
+
+  h2 {
+    margin: 0 0 14px;
+    font-family: $ff-alumni-sans;
+    font-size: 54px;
+    line-height: 1.56;
+    font-weight: 800;
+    color: $color-default-white;
+    letter-spacing: 0.03em;
+  }
+}
+
+.form__fieldset {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin: 0 0 30px;
+  padding: 0;
+  border: 0;
+
+  input {
+    padding: 10px 0;
+    color: $color-default-white;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #74819c;
+  }
+
+  input::placeholder {
+    color: $color-default-white;
+  }
+}
+
+.form__button {
+  font-size: 14px;
+  color: $color-default-white;
+  outline: 3px solid $color-default-white;
+}

@@ -4,7 +4,7 @@
   margin: 0;
   margin-bottom: $desktop;
   font-family: $ff-alumni-sans;
-  font-size: 48px;
+  font-size: 54px;
   line-height: 100%;
   font-weight: 600;
   letter-spacing: 0.03em;
@@ -46,7 +46,7 @@
   line-height: 150%;
   font-weight: 300;
 
-  @media (max-width: $vp-1023) {
+  @media (max-width: $vp-1199) {
     margin-bottom: $tablet;
   }
 

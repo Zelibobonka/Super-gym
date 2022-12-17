@@ -1,0 +1,120 @@
+.instructors {
+  padding: 53px var(--side-offset) 91px;
+
+  @media (max-width: $vp-1199) {
+    padding: 50px var(--side-offset) 100px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding: 35px var(--side-offset) 70px;
+  }
+
+  h2 {
+    @include title-medium (48px, 31px, 50px);
+    padding: 0 56px;
+  }
+}
+
+.instructors__wrapper {
+  position: relative;
+}
+
+.instructors__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 294px;
+  padding: 50px 40px 30px;
+  aspect-ratio: 260 / 294;
+  transition: background-color 0.2s ease;
+
+  h3 {
+    margin: 0;
+    margin-top: auto;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 700;
+    text-align: center;
+    color: $color-default-white;
+  }
+}
+
+.instructors__card:focus,
+.instructors__card:hover {
+  background-color: rgba(16, 38, 84, 0.89);
+
+  h3 {
+    margin: 0 0 10px;
+    animation: appearDown 0.05s linear;
+  }
+
+  .instructors__card-holder {
+    display: block;
+    animation: appearDown 0.05s linear;
+  }
+}
+
+.instructors__card-img {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.instructors__card-holder {
+  display: none;
+
+  p {
+    margin: 0 0 40px;
+    line-height: 1.5;
+    color: #b6bdcc;
+    text-align: center;
+  }
+}
+
+.instructors__card-list {
+  height: 132px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  overflow: auto;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.instructors__card-item {
+  position: relative;
+  padding-left: 31px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: $color-default-white;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: 15px;
+    width: 6px;
+    height: 6px;
+    background-color: $color-default-white;
+    border-radius: 50%;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
+
+@keyframes appearDown {
+  from {
+    transform: translateY(50px);
+  }
+
+  to {
+    transform: none;
+  }
+}

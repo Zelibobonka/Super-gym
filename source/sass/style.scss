@@ -1,7 +1,5 @@
 // Vendor
-@import "vendor/normalize";
-// Swiper 7.4.1
-// @import "vendor/swiper";
+@import "vendor/swiper";
 
 // Global
 @import "variables";
@@ -20,9 +18,20 @@
 @import "blocks/message";
 @import "blocks/instructors";
 @import "blocks/advantages";
-@import "blocks/stocks";
+@import "blocks/promotion";
 @import "blocks/responses";
 @import "blocks/feedback";
 @import "blocks/contacts";
+@import "blocks/main-footer";
 @import "blocks/footer-nav";
 @import "blocks/social";
+@import "blocks/section-holder";
+@import "blocks/swiper";
+
+@media (max-width: $vp-1199) {
+
+}
+
+@media (max-width: $vp-767) {
+
+}

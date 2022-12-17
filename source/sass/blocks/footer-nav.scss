@@ -1,0 +1,22 @@
+.footer-nav__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0 20px;
+  list-style-type: none;
+}
+
+.footer-nav__item {
+  &:not(:last-child) {
+    margin-right: 26px;
+  }
+}
+
+.footer-nav__link {
+  display: inline-flex;
+  margin-bottom: 5px;
+  padding: 7px;
+  font-size: 14px;
+  color: $color-default-white;
+}
