@@ -3,11 +3,11 @@
   background-color: $color-sapphire;
 
   @media (max-width: $vp-1199) {
-    padding: 70px calc(var(--side-offset) + 50px) 70px calc(var(--side-offset) + 30px);
+    padding: 54px calc(var(--side-offset) + 118px) 70px calc(var(--side-offset) + 88px);
   }
 
   @media (max-width: $vp-767) {
-    padding: 70px var(--side-offset);
+    padding: 66px var(--side-offset) 70px;
   }
 
   h2 {
@@ -18,10 +18,22 @@
     font-weight: 800;
     color: $color-default-white;
     letter-spacing: 0.03em;
+
+    @media (max-width: $vp-1199) {
+      margin: 0 0 23px;
+      font-size: 42px;
+      font-weight: 700;
+    }
+
+    @media (max-width: $vp-767) {
+      margin: 0 0 36px;
+      font-size: 32px;
+      line-height: 1;
+    }
   }
 }
 
-.form__fieldset {
+.feedback__form-fieldset {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
@@ -29,12 +41,37 @@
   padding: 0;
   border: 0;
 
+  @media (max-width: $vp-1199) {
+    gap: 62px;
+  }
+
+  @media (max-width: $vp-767) {
+    grid-template-columns: 1fr;
+    gap: 29px;
+    margin: 0 0 41px;
+  }
+
+
   input {
-    padding: 10px 0;
+    padding: 7px 0;
+    font-family: $ff-roboto-condensed;
     color: $color-default-white;
     background-color: transparent;
     border: 0;
     border-bottom: 1px solid #74819c;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+
+    @media (max-width: $vp-767) {
+      display: block;
+      width: 100%;
+    }
   }
 
   input::placeholder {
@@ -42,7 +79,8 @@
   }
 }
 
-.form__button {
+.feedback__form-button {
+  padding: 16px 20px;
   font-size: 14px;
   color: $color-default-white;
   outline: 3px solid $color-default-white;

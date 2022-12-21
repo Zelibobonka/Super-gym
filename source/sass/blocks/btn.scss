@@ -1,18 +1,19 @@
 .btn {
   display: block;
   width: 100%;
-  padding: 24px 20px;
-  font-family: $ff-alumni-sans;
+  padding: 20px;
+  font-family: $ff-roboto-condensed;
   font-size: 12px;
   font-weight: 700;
   color: $color-sapphire;
   background-color: transparent;
   border: none;
   outline: 2px solid $color-sapphire;
+  text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   cursor: pointer;
-
+  user-select: none;
   transition: opacity $trans-default;
 
   &:disabled {

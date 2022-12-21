@@ -1,10 +1,10 @@
 .subscription {
-  padding: 120px var(--side-offset);
+  padding: 126px var(--side-offset) 120px;
   text-align: center;
   background-color: $color-ghost-white;
 
   @media (max-width: $vp-1199) {
-    padding: 100px calc(var(--side-offset) + 50px);
+    padding: 105px var(--side-offset) 100px;
   }
 
   @media (max-width: $vp-767) {
@@ -12,23 +12,37 @@
   }
 
   h2 {
-    @include title-medium (25px, 26px, 35px);
+    @include title-medium (11px, 12px, 12px);
+
+    @media (max-width: $vp-1199) {
+      padding-right: 13px;
+    }
   }
 }
 
-// .subscription__wrapper {
-//   position: relative;
+.subscription__wrapper {
+  position: relative;
 
-//   &::before {
-//     position: absolute;
-//     bottom: -300px;
-//     right: 0;
-//     content: "";
-//     width: calc(100vw - 1080px);
-//     height: 494px;
-//     background-image: url("../img/subscription/weight-plates.png");
-//   }
-// }
+  &::before {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    content: "";
+    width: 470px;
+    height: 494px;
+    background-image: url("../img/subscription/weight-plates.png");
+    transform: translate(285px, 270px);
+
+    @media (max-width: $vp-1199) {
+      background-size: 423px 447px;
+      transform: translate(168px, 275px);
+    }
+
+    @media (max-width: $vp-767) {
+      display: none;
+    }
+  }
+}
 
 .subscription__list-time {
   display: inline-block;
@@ -36,17 +50,41 @@
   padding: 0;
   list-style-type: none;
   border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+
+  @media (max-width: $vp-1199) {
+    margin: 0 0 43px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin: 0 0 37px;
+  }
 }
 
 .subscription__item-time {
   position: relative;
   display: inline-block;
-  padding: 20px 0;
+  padding: 16px 0;
   font-size: 20px;
   cursor: pointer;
 
+  @media (max-width: $vp-1199) {
+    font-size: 18px;
+  }
+
+  @media (max-width: $vp-767) {
+    font-size: 16px;
+  }
+
   &:not(:last-child) {
-    margin-right: 46px;
+    margin-right: 43px;
+
+    @media (max-width: $vp-1199) {
+      margin-right: 52px;
+    }
+
+    @media (max-width: $vp-767) {
+      margin-right: 42px;
+    }
   }
 
   &::before {
@@ -55,9 +93,20 @@
     bottom: -2px;
     content: "";
     height: 2px;
-    width: 0;
     background-color: $color-crimson;
     transition: none;
+  }
+}
+
+.subscription__item-time:hover:not(.subscription__item-time.active) {
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.subscription__item-time:active:not(.subscription__item-time.active) {
+  &:hover {
+    opacity: 0.5;
   }
 }
 
@@ -73,13 +122,27 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @media (max-width: $vp-1199) {
+    grid-template-columns: 1fr;
+    padding: 0 118px;
+  }
+
+  @media (max-width: $vp-767) {
+    gap: 35px;
+    padding: 0;
+  }
 }
 
 .subscription__item-card {
   position: relative;
   z-index: 1;
-  padding: 68px 77px;
+  padding: 65px 77px 68px;
   background-color: $color-default-white;
+
+  @media (max-width: $vp-767) {
+    padding: 49px 42px 57px;
+  }
 
   &::before {
     position: absolute;
@@ -93,11 +156,11 @@
   }
 
   h3 {
-    @include title-small (22px, 22px, 20px);
+    @include title-small (12px, 12px, 10px);
   }
 
   p {
-    @include description (96px, 96px, 81px);
+    @include description (80px, 79px, 67px);
   }
 }
 
@@ -116,32 +179,54 @@
   }
 }
 
+.subscription__subtitle {
+  display: none;
+}
+
+.subscription__subtitle.active {
+  display: block;
+  animation: appearLeft 0.2s linear;
+}
+
 .subscription__price {
   position: relative;
   display: none;
-  margin-bottom: 59px;
+  margin-bottom: 50px;
   font-size: 60px;
   font-weight: 700;
   color: $color-egyptian-blue;
 
+  @media (max-width: $vp-1199) {
+    margin-bottom: 52px;
+  }
+
+  @media (max-width: $vp-767) {
+    font-size: 48px;
+    margin-bottom: 43px;
+  }
+
   &::before {
     position: absolute;
     z-index: -1;
-    top: -37px;
-    left: -19px;
     content: attr(data-rate);
     font-size: 100px;
     color: rgba(232, 232, 232, 0.48);
-  }
+    transform: translate(-16px, -44px);
 
-  &--hold {
-    display: block;
+    @media (max-width: $vp-767) {
+      font-size: 80px;
+      transform: translate(-13px, -37px);
+    }
   }
 
   b {
-    margin-left: 14px;
+    margin-left: 10px;
     font-size: 60px;
     color: $color-sapphire;
+
+    @media (max-width: $vp-767) {
+      font-size: 48px;
+    }
   }
 }
 
@@ -161,7 +246,17 @@
 }
 
 .subscription__btn {
-  padding: 27px 20px 28px;
+  padding: 27px 20px 25px;
+
+  @media (max-width: $vp-1199) {
+    display: inline-block;
+    width: auto;
+    padding: 27px 44px 23px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding: 27px 44px 25px;
+  }
 }
 
 @keyframes buttonBackground {

@@ -1,5 +1,5 @@
 const tabLinks = document.querySelectorAll('.subscription__item-time');
-const tabContent = document.querySelectorAll('.subscription__price');
+const tabContent = document.querySelectorAll('.subscription__price, .subscription__subtitle');
 
 const initTabs = () => {
   tabLinks.forEach((el) => {

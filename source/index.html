@@ -7,6 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="SuperGym" content="Фитнес центр">
   <title>Фитнес центр SuperGym</title>
+  <link rel="preload" href="css/style.min.css" as="style">
+  <link rel="preload" href="fonts/AlumniSans-VariableFont_wght.woff2" as="font">
+  <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font">
+  <link rel="preload" href="fonts/RobotoCondensed-Light.woff2" as="font">
+  <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -14,16 +19,20 @@
   <div class="wrapper">
     <header class="main-header">
       <a class="logo" href="#">SuperGym</a>
-      <a class="main-header__contact" href="tel:88005555555">8-800-555-55-55</a>
+      <div class="main-header__contact-wrapper">
+        <a class="main-header__contact" href="tel:88005555555">8-800-555-55-55</a>
+      </div>
     </header>
 
     <main>
       <section class="intro">
         <div class="intro__text-holder">
-          <span>Омск</span>
-          <h1>Фитнес центр</h1>
-          <p>Тренажёрный зал Групповые занятия Кардио-зона</p>
-          <button class="intro__btn btn" type="button">Купить абонемент</button>
+          <span>омск</span>
+          <div class="intro__text">
+            <h1>Фитнес центр</h1>
+            <p>Тренажёрный зал Групповые занятия Кардио-зона</p>
+          </div>
+          <a href="#subscription" class="intro__btn btn">Купить абонемент</a>
         </div>
         <picture>
           <source type="image/webp" srcset="img/intro/intro.webp 1x, img/intro/intro@2x.webp 2x" />
@@ -39,20 +48,23 @@
           <p>Supergym&nbsp;&mdash; самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для укрепления тела
             и&nbsp;здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.
           </p>
-          <p>В&nbsp;зале расположены отдельная зона для Crossfit и&nbsp;кардио-зона с&nbsp;40&nbsp;тренажерами. Также
+          <p class="promo__text-hidden">В&nbsp;зале расположены отдельная зона для Crossfit и&nbsp;кардио-зона с&nbsp;40&nbsp;тренажерами. Также
             в&nbsp;фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
         </div>
         <picture>
-          <source type="image/webp" srcset="img/promo/promo.webp 1x, img/promo/promo@2x.webp 2x" />
-          <img src="img/promo/promo.jpg" srcset="img/promo/promo@2x.jpg 2x" width="660" height="401" alt=""
+          <source type="image/webp" media="(max-width: 767px)" srcset="img/promo/promo-mobile.webp 1x, img/promo/promo-mobile@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 1199px)" srcset="img/promo/promo-tablet.webp 1x, img/promo/promo-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/promo/promo-desktop.webp 1x, img/promo/promo-desktop@2x.webp 2x" />
+          <img class="promo__img" src="img/promo/promo-desktop.jpg" srcset="img/promo/promo-desktop@2x.jpg 2x" width="660" height="401" alt=""
             aria-hidden="true">
         </picture>
         <div class="promo__video">
           <div class="promo__video-wrapper">
             <picture>
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/promo/promo-video-preview-mobile.webp 1x, img/promo/promo-video-preview-mobile@2x.webp 2x">
               <source type="image/webp"
                 srcset="img/promo/promo-video-preview.webp 1x, img/promo/promo-video-preview@2x.webp 2x" />
-              <img src="img/promo/promo-video-preview.jpg" srcset="img/promo/promo-video-preview@2x.jpg 2x" width="364"
+              <img class="promo__video-img" src="img/promo/promo-video-preview.jpg" srcset="img/promo/promo-video-preview@2x.jpg 2x" width="364"
                 height="228" alt="" aria-hidden="true">
             </picture>
             <div class="promo__video-overlay"></div>
@@ -61,53 +73,61 @@
         </div>
       </section>
 
-      <section class="subscription">
+      <section class="subscription" id="subscription">
         <h2>Абонементы</h2>
-        <ul class="subscription__list-time">
-          <li class="subscription__item-time active" data-time="1" tabindex="0">1 месяц</li>
-          <li class="subscription__item-time" data-time="6" tabindex="0">6 месяцев</li>
-          <li class="subscription__item-time" data-time="12" tabindex="0">12 месяцев</li>
-        </ul>
-        <ul class="subscription__list-cards">
-          <li class="subscription__item-card">
-            <h3>С тренером</h3>
-            <p>12 занятий</p>
-            <span class="subscription__price subscription__price--hold" data-rate="5000">5000<b>₽</b></span>
-            <a class="subscription__btn btn" href="#">купить абонемент</a>
-          </li>
-          <li class="subscription__item-card">
-            <h3>Дневной</h3>
-            <p>с 8:00 до 17:00</p>
-            <span class="subscription__price active" data-price="1" data-rate="1700">1700<b>₽</b></span>
-            <span class="subscription__price" data-price="6" data-rate="9000">9000<b>₽</b></span>
-            <span class="subscription__price" data-price="12" data-rate="18000">18000<b>₽</b></span>
-            <a class="subscription__btn btn" href="#">купить абонемент</a>
-          </li>
-          <li class="subscription__item-card">
-            <h3>Полный день</h3>
-            <p>с 8:00 до 22:00 </p>
-            <span class="subscription__price active" data-price="1" data-rate="2700">2700<b>₽</b></span>
-            <span class="subscription__price" data-price="6" data-rate="14000">14000<b>₽</b></span>
-            <span class="subscription__price" data-price="12" data-rate="28000">28000<b>₽</b></span>
-            <a class="subscription__btn btn" href="#">купить абонемент</a>
-          </li>
-        </ul>
+        <div class="subscription__wrapper">
+          <ul class="subscription__list-time">
+            <li class="subscription__item-time active" data-time="1" tabindex="0">1 месяц</li>
+            <li class="subscription__item-time" data-time="6" tabindex="0">6 месяцев</li>
+            <li class="subscription__item-time" data-time="12" tabindex="0">12 месяцев</li>
+          </ul>
+          <ul class="subscription__list-cards">
+            <li class="subscription__item-card">
+              <h3>С тренером</h3>
+              <p class="subscription__subtitle active" data-price="1">12 занятий</p>
+              <p class="subscription__subtitle" data-price="6">72 занятия</p>
+              <p class="subscription__subtitle" data-price="12">144 занятия</p>
+              <span class="subscription__price active" data-price="1" data-rate="5000">5000<b>₽</b></span>
+              <span class="subscription__price" data-price="6" data-rate="27000">27000<b>₽</b></span>
+              <span class="subscription__price" data-price="12" data-rate="55000">55000<b>₽</b></span>
+              <a class="subscription__btn btn" href="#">купить абонемент</a>
+            </li>
+            <li class="subscription__item-card">
+              <h3>Дневной</h3>
+              <p>с 8:00 до 17:00</p>
+              <span class="subscription__price active" data-price="1" data-rate="1700">1700<b>₽</b></span>
+              <span class="subscription__price" data-price="6" data-rate="9000">9000<b>₽</b></span>
+              <span class="subscription__price" data-price="12" data-rate="18000">18000<b>₽</b></span>
+              <a class="subscription__btn btn" href="#">купить абонемент</a>
+            </li>
+            <li class="subscription__item-card">
+              <h3>Полный день</h3>
+              <p>с 8:00 до 22:00 </p>
+              <span class="subscription__price active" data-price="1" data-rate="2700">2700<b>₽</b></span>
+              <span class="subscription__price" data-price="6" data-rate="14000">14000<b>₽</b></span>
+              <span class="subscription__price" data-price="12" data-rate="28000">28000<b>₽</b></span>
+              <a class="subscription__btn btn" href="#">купить абонемент</a>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <article class="message">
         <div class="message__content-wrapper">
-          <h2>Super games</h2>
-          <div class="message__holder">
-            <p>Дата</p>
-            <div class="message__date-holder">
-              <span>7</span>
-              <b>Марта 2019</b>
+          <div class="message__content">
+            <h2>Super games</h2>
+            <div class="message__holder">
+              <p>Дата</p>
+              <div class="message__date-holder">
+                <span>7</span>
+                <b>Марта<br>2019</b>
+              </div>
+              <p>Время</p>
+              <span>12:00</span>
             </div>
-            <p>Время</p>
-            <span>12:00</span>
+            <p>Ежегодные соревнования по&nbsp;CrossFit</p>
+            <a class="message__btn btn">заполнить заявку</a>
           </div>
-          <p>Ежегодные соревнования по&nbsp;CrossFit</p>
-          <button class="message__btn btn" type="button">заполнить заявку</button>
         </div>
         <picture>
           <source type="image/webp" srcset="img/message/message.webp 1x, img/message/message@2x.webp 2x" />
@@ -293,7 +313,7 @@
               </div>
               <div class="advantages__text-holder">
                 <h3>Собственная парковка</h3>
-                <p>Вы&nbsp;всегда найдете место для своей машины на&nbsp;нашей парковке</p>
+                <p>Вы&nbsp;всегда найдете место для своей&nbsp;машины на&nbsp;нашей парковке</p>
               </div>
             </li>
           </ul>
@@ -344,8 +364,10 @@
               </div>
             </div>
             <picture>
-              <source type="image/webp" srcset="img/promotion/promotion.webp 1x, img/promotion/promotion@2x.webp 2x">
-              <img class="promotion__img" src="img/promotion/promotion.jpg" srcset="img/promotion/promotion@2x.jpg 2x"
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/promotion/promotion-mobile.webp 1x, img/promotion/promotion-mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1199px)" srcset="img/promotion/promotion-tablet.webp 1x, img/promotion/promotion-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/promotion/promotion-desktop.webp 1x, img/promotion/promotion-desktop@2x.webp 2x">
+              <img class="promotion__img" src="img/promotion/promotion-desktop.jpg" srcset="img/promotion/promotion-desktop@2x.jpg 2x"
                 loading="lazy" width="280" height="462" alt="" aria-hidden="true" />
             </picture>
           </div>
@@ -353,7 +375,7 @@
           <ul class="promotion__list">
             <li class="promotion__item">
               <h3>Месяц бесплатно</h3>
-              <p>Приведи друга, получи абонемент в&nbsp;подарок</p>
+              <p>Приведи друга, получи абонемент&nbsp;в&nbsp;подарок</p>
               <div class="promotion__link-holder">
                 <a class="promotion__link" href="#">подробнее</a>
               </div>
@@ -404,17 +426,16 @@
               </li>
             </ul>
           </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+          <div class="responses__button-prev swiper-button-prev"></div>
+          <div class="responses__button-next swiper-button-next"></div>
         </div>
       </section>
 
       <div class="section-holder">
         <section class="feedback">
           <h2>Бесплатное занятие</h2>
-
-          <form class="form" action="https://echo.htmlacademy.ru/" method="post">
-            <fieldset class="form__fieldset">
+          <form class="feedback__form" action="https://echo.htmlacademy.ru/" method="post">
+            <fieldset class="feedback__form-fieldset">
               <legend class="visually-hidden">Ваши данные.</legend>
               <label class="visually-hidden" for="name">Ваше имя.</label>
               <input type="text" id="name" name="name" placeholder="Имя" autocomplete="on" required>
@@ -422,7 +443,7 @@
               <input type="tel" id="phone" name="phone" placeholder="Телефон" pattern="[0-9'+''('')']+$"
                 title="Используйте только цифры, '+()'" autocomplete="on" required>
             </fieldset>
-            <button class="form__button btn" type="submit">Отправить</button>
+            <button class="feedback__form-button btn" type="submit">Отправить</button>
           </form>
         </section>
 
@@ -437,7 +458,7 @@
               <h3>Телефон:</h3>
               <a href="tel:88005555555">8-800-555-55-55</a>
             </li>
-            <li class="contacts__item">
+            <li class="contacts__item contacts__item--order">
               <h3>График работы:</h3>
               <p>Пн-Вс: с 8:00 до 22:00</p>
             </li>

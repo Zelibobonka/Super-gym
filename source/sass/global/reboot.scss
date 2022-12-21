@@ -23,6 +23,10 @@ html {
   -moz-osx-font-smoothing: grayscale;
 
   text-rendering: optimizeLegibility;
+
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
+  }
 }
 
 body {
@@ -30,6 +34,10 @@ body {
   height: 100%;
 
   background-color: $color-default-white;
+}
+
+main {
+  overflow: hidden;
 }
 
 a {

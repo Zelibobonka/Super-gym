@@ -1,6 +1,10 @@
 :root {
   --side-offset: calc(50vw - 580px);
 
+  @media (max-width: $vp-1365) {
+    --side-offset: 103px;
+  }
+
   @media (max-width: $vp-1199) {
     --side-offset: 45px;
   }

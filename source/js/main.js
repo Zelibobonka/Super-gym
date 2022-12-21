@@ -8,8 +8,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Utils
   iosVhFix();
-  initVideo();
   initTabs();
+  initVideo();
 
   // document.documentElement.style.setProperty('--scrollbarWidth',
   //     `${window.innerWidth - document.body.clientWidth}px`);
@@ -17,6 +17,5 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
 
   window.addEventListener('load', () => {
-
   });
 });

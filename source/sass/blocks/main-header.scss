@@ -3,27 +3,51 @@
   left: 0;
   right: 0;
   z-index: 2;
-  display: flex;
+  display: grid;
+  grid-template-columns: max-content auto;
+  gap: 50px;
   justify-content: space-between;
   padding: 30px var(--side-offset);
 
   @media (max-width: $vp-1199) {
-    padding: 40px var(--side-offset) 25px;
+    padding: 35px var(--side-offset) 25px;
   }
 
   @media (max-width: $vp-767) {
+    gap: 10px;
     padding: 15px var(--side-offset);
   }
 }
 
+.main-header__contact-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
 .main-header__contact {
+  display: inline-block;
+  margin-left: 30px;
   font-family: $ff-alumni-sans;
   font-size: 26px;
   font-weight: 700;
+  line-height: 1.2;
   color: $color-default-white;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 
   @media (max-width: $vp-1199) {
     font-size: 24px;
+  }
+
+  @media (max-width: $vp-767) {
+    font-size: 20px;
   }
 }

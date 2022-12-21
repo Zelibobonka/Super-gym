@@ -1,10 +1,13 @@
 .logo {
+  display: inline-block;
   font-family: $ff-alumni-sans;
   font-size: 36px;
   font-weight: 700;
+  line-height: 1.2;
   color: $color-default-white;
   text-transform: uppercase;
   letter-spacing: 0.02em;
+  cursor: default;
 
   @media (max-width: $vp-1199) {
     font-size: 24px;
@@ -15,6 +18,16 @@
   }
 
   &--footer {
+    padding-top: 3px;
     font-size: 26px;
+
+    @media (max-width: $vp-1199) {
+      padding-top: 0;
+    }
+
+    @media (max-width: $vp-767) {
+      position: absolute;
+      top: 46px;
+    }
   }
 }

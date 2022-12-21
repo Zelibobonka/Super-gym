@@ -5,10 +5,13 @@
   background-color: $color-black-russian;
 
   @media (max-width: $vp-1199) {
-    padding: 45px (--side-offset);
+    grid-template-columns: 1fr 4.8fr 1fr;
+    padding: 43px calc(var(--side-offset) - 6px) 43px var(--side-offset);
   }
 
   @media (max-width: $vp-767) {
-    padding: 50px var(--side-offset);
+    position: relative;
+    display: block;
+    padding: 42px var(--side-offset) 52px;
   }
 }

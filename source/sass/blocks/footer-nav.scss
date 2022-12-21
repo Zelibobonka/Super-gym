@@ -3,13 +3,31 @@
   justify-content: center;
   flex-wrap: wrap;
   margin: 0;
-  padding: 0 20px;
+  padding: 0 26px 0 20px;
   list-style-type: none;
+
+  @media (max-width: $vp-767) {
+    display: block;
+    margin-bottom: 21px;
+    padding: 0;
+    column-count: auto;
+    column-width: 100px;
+  }
 }
 
 .footer-nav__item {
   &:not(:last-child) {
     margin-right: 26px;
+
+    @media (max-width: $vp-1199) {
+      margin-right: 16px;
+    }
+  }
+
+  &:first-child {
+    @media (max-width: $vp-767) {
+      margin-top: 40px;
+    }
   }
 }
 
@@ -19,4 +37,18 @@
   padding: 7px;
   font-size: 14px;
   color: $color-default-white;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-bottom: 10px;
+    padding: 7px 0;
+    font-size: 16px;
+  }
 }

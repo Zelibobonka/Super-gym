@@ -1,17 +1,21 @@
 .instructors {
-  padding: 53px var(--side-offset) 91px;
+  padding: 59px var(--side-offset) 91px;
 
   @media (max-width: $vp-1199) {
-    padding: 50px var(--side-offset) 100px;
+    padding: 56px calc(var(--side-offset) + 56px) 100px;
   }
 
   @media (max-width: $vp-767) {
-    padding: 35px var(--side-offset) 70px;
+    padding: 33px calc(var(--side-offset) + 32px) 70px;
   }
 
   h2 {
-    @include title-medium (48px, 31px, 50px);
-    padding: 0 56px;
+    @include title-medium (53px, 35px, 45px);
+
+    @media (max-width: $vp-1199) {
+      text-align: center;
+      padding-right: 6px;
+    }
   }
 }
 
@@ -23,19 +27,31 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 294px;
-  padding: 50px 40px 30px;
+  padding: 56px 40px 27px;
   aspect-ratio: 260 / 294;
   transition: background-color 0.2s ease;
+
+  @media (max-width: $vp-1199) {
+    aspect-ratio: 268 / 294;
+  }
+
+  @media (max-width: $vp-767) {
+    padding: 48px 18px 27px;
+    aspect-ratio: 226 / 274;
+  }
 
   h3 {
     margin: 0;
     margin-top: auto;
     font-size: 18px;
-    line-height: 1.5;
+    line-height: 1;
     font-weight: 700;
     text-align: center;
     color: $color-default-white;
+
+    @media (max-width: $vp-1199) {
+      padding-left: 7px;
+    }
   }
 }
 
@@ -44,8 +60,17 @@
   background-color: rgba(16, 38, 84, 0.89);
 
   h3 {
-    margin: 0 0 10px;
+    margin: 0 0 1px;
     animation: appearDown 0.05s linear;
+
+    @media (max-width: $vp-1199) {
+      padding-left: 0;
+      padding-right: 9px;
+    }
+
+    @media (max-width: $vp-767) {
+      padding-right: 0;
+    }
   }
 
   .instructors__card-holder {
@@ -66,19 +91,26 @@
   display: none;
 
   p {
-    margin: 0 0 40px;
+    margin: 0 0 33px;
     line-height: 1.5;
     color: #b6bdcc;
     text-align: center;
+
+    @media (max-width: $vp-1199) {
+      padding-right: 7px;
+    }
+
+    @media (max-width: $vp-767) {
+      padding-right: 0;
+    }
   }
 }
 
 .instructors__card-list {
-  height: 132px;
   margin: 0;
   padding: 0;
   list-style-type: none;
-  overflow: auto;
+
   scrollbar-width: none;
 
   &::-webkit-scrollbar {
@@ -96,7 +128,7 @@
   &::before {
     position: absolute;
     content: "";
-    top: 5px;
+    top: 7px;
     left: 15px;
     width: 6px;
     height: 6px;
@@ -105,7 +137,7 @@
   }
 
   &:not(:last-child) {
-    margin-bottom: 24px;
+    margin-bottom: 13px;
   }
 }
 
