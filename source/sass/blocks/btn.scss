@@ -24,4 +24,8 @@
   &:hover {
     opacity: 0.8;
   }
+
+  &:focus-visible {
+    outline: 2px solid $color-default-black;
+  }
 }

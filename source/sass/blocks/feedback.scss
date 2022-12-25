@@ -11,11 +11,10 @@
   }
 
   h2 {
+    @include fallback-font-weight(800);
     margin: 0 0 14px;
-    font-family: $ff-alumni-sans;
     font-size: 54px;
     line-height: 1.56;
-    font-weight: 800;
     color: $color-default-white;
     letter-spacing: 0.03em;
 

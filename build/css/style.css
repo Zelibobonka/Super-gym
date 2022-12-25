@@ -921,6 +921,24 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  scrollbar-gutter: stable;
+  scrollbar-color: #102654 #ffffff;
+  scrollbar-width: thin;
+}
+
+html ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+html ::-webkit-scrollbar-track {
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+html ::-webkit-scrollbar-thumb {
+  background-color: #102654;
+  border-radius: 4px;
 }
 
 body {
@@ -1139,6 +1157,10 @@ button,
   opacity: 0.8;
 }
 
+.btn:focus-visible {
+  outline: 2px solid #000000;
+}
+
 .main-header {
   position: absolute;
   left: 0;
@@ -1169,11 +1191,12 @@ button,
 }
 
 .main-header__contact {
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-variation-settings: "wght" 700;
   display: inline-block;
   margin-left: 30px;
-  font-family: "Alumni Sans", "Arial", sans-serif;
   font-size: 26px;
-  font-weight: 700;
   line-height: 1.2;
   color: #ffffff;
   letter-spacing: 0.03em;
@@ -1188,10 +1211,11 @@ button,
 }
 
 .logo {
-  display: inline-block;
   font-family: "Alumni Sans", "Arial", sans-serif;
-  font-size: 36px;
   font-weight: 700;
+  font-variation-settings: "wght" 700;
+  display: inline-block;
+  font-size: 36px;
   line-height: 1.2;
   color: #ffffff;
   text-transform: uppercase;
@@ -1223,11 +1247,12 @@ button,
 }
 
 .intro__text-holder span {
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-weight: 600;
+  font-variation-settings: "wght" 600;
   display: block;
   margin: 0 51px 19px 0;
-  font-family: "Alumni Sans", "Arial", sans-serif;
   font-size: 48px;
-  font-weight: 600;
   color: #ffffff;
   letter-spacing: 0.03em;
 }
@@ -1237,10 +1262,11 @@ button,
 }
 
 .intro__text h1 {
-  margin: 0 0 52px;
   font-family: "Alumni Sans", "Arial", sans-serif;
-  font-size: 92px;
   font-weight: 800;
+  font-variation-settings: "wght" 800;
+  margin: 0 0 52px;
+  font-size: 92px;
   line-height: 120%;
   color: #ffffff;
   text-transform: uppercase;
@@ -1288,11 +1314,12 @@ button,
 .promo__text-wrapper h2 {
   margin: 0;
   margin-bottom: 16px;
-  font-family: "Alumni Sans", "Arial", sans-serif;
   font-size: 54px;
   line-height: 100%;
-  font-weight: 600;
   letter-spacing: 0.03em;
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-weight: 600;
+  font-variation-settings: "wght" 600;
   font-size: 48px;
 }
 
@@ -1380,11 +1407,12 @@ button,
 .subscription h2 {
   margin: 0;
   margin-bottom: 11px;
-  font-family: "Alumni Sans", "Arial", sans-serif;
   font-size: 54px;
   line-height: 100%;
-  font-weight: 600;
   letter-spacing: 0.03em;
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-weight: 600;
+  font-variation-settings: "wght" 600;
 }
 
 .subscription__wrapper {
@@ -1537,13 +1565,15 @@ button,
 
 .subscription__price::before {
   position: absolute;
+  top: 50%;
+  left: 50%;
   z-index: -1;
   content: attr(data-rate);
   font-size: 100px;
   color: rgba(232, 232, 232, 0.48);
-  -webkit-transform: translate(-16px, -44px);
-  -ms-transform: translate(-16px, -44px);
-  transform: translate(-16px, -44px);
+  -webkit-transform: translate(-50%, -74px);
+  -ms-transform: translate(-50%, -74px);
+  transform: translate(-50%, -74px);
 }
 
 .subscription__price b {
@@ -1631,10 +1661,11 @@ button,
 }
 
 .message__content h2 {
-  margin: 0 0 34px;
   font-family: "Alumni Sans", "Arial", sans-serif;
-  font-size: 82px;
   font-weight: 600;
+  font-variation-settings: "wght" 600;
+  margin: 0 0 34px;
+  font-size: 82px;
   line-height: 0.96;
   color: #ffffff;
   text-transform: uppercase;
@@ -1710,11 +1741,12 @@ button,
 .instructors h2 {
   margin: 0;
   margin-bottom: 53px;
-  font-family: "Alumni Sans", "Arial", sans-serif;
   font-size: 54px;
   line-height: 100%;
-  font-weight: 600;
   letter-spacing: 0.03em;
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-weight: 600;
+  font-variation-settings: "wght" 600;
 }
 
 .instructors__wrapper {
@@ -1731,6 +1763,7 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   padding: 56px 40px 27px;
+  background-color: rgba(16, 38, 84, 0.89);
   aspect-ratio: 260/294;
   -webkit-transition: background-color 0.2s ease;
   -o-transition: background-color 0.2s ease;
@@ -1738,6 +1771,7 @@ button,
 }
 
 .instructors__card h3 {
+  z-index: 0;
   margin: 0;
   margin-top: auto;
   font-size: 18px;
@@ -1749,7 +1783,7 @@ button,
 
 .instructors__card:focus,
 .instructors__card:hover {
-  background-color: rgba(16, 38, 84, 0.89);
+  overflow: auto;
 }
 
 .instructors__card:focus h3,
@@ -1766,9 +1800,14 @@ button,
   animation: appearDown 0.05s linear;
 }
 
+.instructors__card:focus .instructors__card-img,
+.instructors__card:hover .instructors__card-img {
+  z-index: -1;
+}
+
 .instructors__card-img {
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   inset: 0;
   width: 100%;
   height: 100%;
@@ -1776,6 +1815,7 @@ button,
 
 .instructors__card-holder {
   display: none;
+  overflow: auto;
 }
 
 .instructors__card-holder p {
@@ -1789,11 +1829,6 @@ button,
   margin: 0;
   padding: 0;
   list-style-type: none;
-  scrollbar-width: none;
-}
-
-.instructors__card-list::-webkit-scrollbar {
-  display: none;
 }
 
 .instructors__card-item {
@@ -1851,11 +1886,12 @@ button,
 .advantages h2 {
   margin: 0;
   margin-bottom: 59px;
-  font-family: "Alumni Sans", "Arial", sans-serif;
   font-size: 54px;
   line-height: 100%;
-  font-weight: 600;
   letter-spacing: 0.03em;
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-weight: 600;
+  font-variation-settings: "wght" 600;
   padding-left: 11px;
   text-align: center;
 }
@@ -1986,11 +2022,12 @@ button,
 .promotion h2 {
   margin: 0;
   margin-bottom: 39px;
-  font-family: "Alumni Sans", "Arial", sans-serif;
   font-size: 54px;
   line-height: 100%;
-  font-weight: 600;
   letter-spacing: 0.03em;
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-weight: 600;
+  font-variation-settings: "wght" 600;
   text-align: center;
 }
 
@@ -2135,11 +2172,12 @@ button,
 .responses h2 {
   margin: 0;
   margin-bottom: 42px;
-  font-family: "Alumni Sans", "Arial", sans-serif;
   font-size: 54px;
   line-height: 100%;
-  font-weight: 600;
   letter-spacing: 0.03em;
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-weight: 600;
+  font-variation-settings: "wght" 600;
   padding-left: 9px;
   text-align: center;
 }
@@ -2183,11 +2221,12 @@ button,
 }
 
 .feedback h2 {
-  margin: 0 0 14px;
   font-family: "Alumni Sans", "Arial", sans-serif;
+  font-weight: 800;
+  font-variation-settings: "wght" 800;
+  margin: 0 0 14px;
   font-size: 54px;
   line-height: 1.56;
-  font-weight: 800;
   color: #ffffff;
   letter-spacing: 0.03em;
 }
@@ -2255,11 +2294,12 @@ button,
 .contacts h2 {
   margin: 0;
   margin-bottom: 31px;
-  font-family: "Alumni Sans", "Arial", sans-serif;
   font-size: 54px;
   line-height: 100%;
-  font-weight: 600;
   letter-spacing: 0.03em;
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-weight: 600;
+  font-variation-settings: "wght" 600;
   margin-left: 55px;
 }
 
@@ -2676,7 +2716,7 @@ button,
   }
 
   .message__holder p {
-    margin-bottom: 5px;
+    margin-bottom: 3px;
   }
 
   .message__holder span {
@@ -2684,7 +2724,7 @@ button,
   }
 
   .message__date-holder {
-    margin-bottom: 6px;
+    margin-bottom: 9px;
   }
 
   .message__date-holder span {
@@ -3103,9 +3143,9 @@ button,
 
   .subscription__price::before {
     font-size: 80px;
-    -webkit-transform: translate(-13px, -37px);
-    -ms-transform: translate(-13px, -37px);
-    transform: translate(-13px, -37px);
+    -webkit-transform: translate(-50%, -60px);
+    -ms-transform: translate(-50%, -60px);
+    transform: translate(-50%, -60px);
   }
 
   .subscription__price b {
@@ -3124,6 +3164,10 @@ button,
 
   .message__content {
     padding: 48px 45px 51px;
+  }
+
+  .message__btn {
+    padding: 14px 20px;
   }
 
   .message__img {
@@ -3378,6 +3422,10 @@ button,
     margin-bottom: 10px;
     padding: 7px 0;
     font-size: 16px;
+  }
+
+  .swiper-button-prev {
+    left: -36px;
   }
 
   .swiper-button-prev::after {

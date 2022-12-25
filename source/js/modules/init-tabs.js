@@ -9,7 +9,7 @@ const initTabs = () => {
 
 
   function openTabs(el) {
-    if (el.code === 'Enter' || el.code === 'Space' || el.which === 1) {
+    if (el.code === 'Enter' || el.code === 'Space' || el.button === 0) {
       const btnTarget = el.currentTarget;
       const time = btnTarget.dataset.time;
 

@@ -208,15 +208,17 @@
 
   &::before {
     position: absolute;
+    top: 50%;
+    left: 50%;
     z-index: -1;
     content: attr(data-rate);
     font-size: 100px;
     color: rgba(232, 232, 232, 0.48);
-    transform: translate(-16px, -44px);
+    transform: translate(-50%, -74px);
 
     @media (max-width: $vp-767) {
       font-size: 80px;
-      transform: translate(-13px, -37px);
+      transform: translate(-50%, -60px);
     }
   }
 

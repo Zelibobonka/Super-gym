@@ -34,11 +34,10 @@
   }
 
   span {
+    @include fallback-font-weight(600);
     display: block;
     margin: 0 51px 19px 0;
-    font-family: $ff-alumni-sans;
     font-size: 48px;
-    font-weight: 600;
     color: $color-default-white;
     letter-spacing: 0.03em;
 
@@ -58,10 +57,9 @@
   position: relative;
 
   h1 {
+    @include fallback-font-weight(800);
     margin: 0 0 52px;
-    font-family: $ff-alumni-sans;
     font-size: 92px;
-    font-weight: 800;
     line-height: 120%;
     color: $color-default-white;
     text-transform: uppercase;

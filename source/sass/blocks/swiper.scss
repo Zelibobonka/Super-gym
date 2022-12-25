@@ -7,6 +7,10 @@
 .swiper-button-prev {
   left: -55px;
 
+  @media (max-width: $vp-767) {
+    left: -36px;
+  }
+
   &::after {
     content: "";
     width: 22px;

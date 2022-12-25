@@ -1,13 +1,21 @@
+// Font Weight
+
+@mixin fallback-font-weight($weight) {
+  font-family: $ff-alumni-sans;
+  font-weight: $weight;
+  font-variation-settings: "wght" $weight;
+}
+
 // Title
 
 @mixin title-medium ($desktop, $tablet, $mobile) {
   margin: 0;
   margin-bottom: $desktop;
-  font-family: $ff-alumni-sans;
   font-size: 54px;
   line-height: 100%;
-  font-weight: 600;
   letter-spacing: 0.03em;
+
+  @include fallback-font-weight (600);
 
   @media (max-width: $vp-1199) {
     margin-bottom: $tablet;

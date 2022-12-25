@@ -24,8 +24,27 @@ html {
 
   text-rendering: optimizeLegibility;
 
+  scrollbar-gutter: stable;
+  scrollbar-color: $color-sapphire $color-default-white;
+  scrollbar-width: thin;
+
   @media (prefers-reduced-motion: no-preference) {
     scroll-behavior: smooth;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: $color-default-white;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: $color-sapphire;
+    border-radius: 4px;
   }
 }
 
