@@ -1154,7 +1154,7 @@ button,
 }
 
 .btn:hover {
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 .btn:focus-visible {
@@ -3324,6 +3324,7 @@ button,
   }
 
   .responses__card-holder h3 {
+    min-height: 52px;
     margin: 0 0 22px;
     padding-left: 99px;
     line-height: 1.3;

@@ -69,6 +69,7 @@
     color: $color-default-white;
 
     @media (max-width: $vp-767) {
+      min-height: 52px;
       margin: 0 0 22px;
       padding-left: 99px;
       line-height: 1.3;
