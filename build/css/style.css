@@ -1445,6 +1445,7 @@ button,
   display: inline-block;
   padding: 16px 0;
   font-size: 20px;
+  color: rgba(16, 38, 84, 0.5);
   cursor: pointer;
 }
 
@@ -1465,12 +1466,8 @@ button,
   transition: none;
 }
 
-.subscription__item-time:hover:not(.subscription__item-time.active):hover {
-  opacity: 0.7;
-}
-
-.subscription__item-time:active:not(.subscription__item-time.active):hover {
-  opacity: 0.5;
+.subscription__item-time.active {
+  color: #102654;
 }
 
 .subscription__item-time.active::before {
@@ -1478,6 +1475,14 @@ button,
   -webkit-transition: width 0.2s linear;
   -o-transition: width 0.2s linear;
   transition: width 0.2s linear;
+}
+
+.subscription__item-time:hover:not(.subscription__item-time.active) {
+  color: #102654;
+}
+
+.subscription__item-time:active:not(.subscription__item-time.active) {
+  opacity: 0.7;
 }
 
 .subscription__list-cards {
