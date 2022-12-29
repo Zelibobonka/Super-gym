@@ -18,7 +18,7 @@
 <body>
   <div class="wrapper">
     <header class="main-header">
-      <a class="logo" href="#">SuperGym</a>
+      <a class="logo" href="#" tabindex="-1">SuperGym</a>
       <div class="main-header__contact-wrapper">
         <a class="main-header__contact" href="tel:88005555555">8-800-555-55-55</a>
       </div>
@@ -30,7 +30,11 @@
           <span>омск</span>
           <div class="intro__text">
             <h1>Фитнес центр</h1>
-            <p>Тренажёрный зал Групповые занятия Кардио-зона</p>
+            <div class="intro__text-wrapper">
+              <p>Тренажёрный зал</p>
+              <p>Групповые занятия</p>
+              <p>Кардио-зона</p>
+            </div>
           </div>
           <a href="#subscription" class="intro__btn btn">Купить абонемент</a>
         </div>
@@ -48,23 +52,29 @@
           <p>Supergym&nbsp;&mdash; самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для укрепления тела
             и&nbsp;здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.
           </p>
-          <p class="promo__text-hidden">В&nbsp;зале расположены отдельная зона для Crossfit и&nbsp;кардио-зона с&nbsp;40&nbsp;тренажерами. Также
+          <p class="promo__text-hidden">В&nbsp;зале расположены отдельная зона для Crossfit и&nbsp;кардио-зона
+            с&nbsp;40&nbsp;тренажерами. Также
             в&nbsp;фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
         </div>
         <picture>
-          <source type="image/webp" media="(max-width: 767px)" srcset="img/promo/promo-mobile.webp 1x, img/promo/promo-mobile@2x.webp 2x">
-          <source type="image/webp" media="(max-width: 1199px)" srcset="img/promo/promo-tablet.webp 1x, img/promo/promo-tablet@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 767px)"
+            srcset="img/promo/promo-mobile.webp 1x, img/promo/promo-mobile@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 1199px)"
+            srcset="img/promo/promo-tablet.webp 1x, img/promo/promo-tablet@2x.webp 2x">
           <source type="image/webp" srcset="img/promo/promo-desktop.webp 1x, img/promo/promo-desktop@2x.webp 2x" />
-          <img class="promo__img" src="img/promo/promo-desktop.jpg" srcset="img/promo/promo-desktop@2x.jpg 2x" width="660" height="401" alt="Тренажерный зал фитнес центра. Светлый и уютный.">
+          <img class="promo__img" src="img/promo/promo-desktop.jpg" srcset="img/promo/promo-desktop@2x.jpg 2x"
+            width="660" height="401" alt="Тренажерный зал фитнес центра. Светлый и уютный.">
         </picture>
         <div class="promo__video">
           <div class="promo__video-wrapper">
             <picture>
-              <source type="image/webp" media="(max-width: 767px)" srcset="img/promo/promo-video-preview-mobile.webp 1x, img/promo/promo-video-preview-mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 767px)"
+                srcset="img/promo/promo-video-preview-mobile.webp 1x, img/promo/promo-video-preview-mobile@2x.webp 2x">
               <source type="image/webp"
                 srcset="img/promo/promo-video-preview.webp 1x, img/promo/promo-video-preview@2x.webp 2x" />
-              <img class="promo__video-img" src="img/promo/promo-video-preview.jpg" srcset="img/promo/promo-video-preview@2x.jpg 2x" width="364"
-                height="228" alt="Превью видео о фитнес центре.">
+              <img class="promo__video-img" src="img/promo/promo-video-preview.jpg"
+                srcset="img/promo/promo-video-preview@2x.jpg 2x" width="364" height="228"
+                alt="Превью видео о фитнес центре.">
             </picture>
             <div class="promo__video-overlay"></div>
             <button class="promo__video-button" type="button" aria-label="Проиграть видео."></button>
@@ -146,7 +156,8 @@
                   <source type="image/webp"
                     srcset="img/instructors/instructor-1.webp 1x, img/instructors/instructor-1@2x.webp 2x">
                   <img class="instructors__card-img" src="img/instructors/instructor-1.jpg"
-                    srcset="img/instructors/instructor-1@2x.jpg 2x" loading="lazy" width="260" height="294" alt="Милая девушка с красивыми глазами."/>
+                    srcset="img/instructors/instructor-1@2x.jpg 2x" loading="lazy" width="260" height="294"
+                    alt="Милая девушка с красивыми глазами." />
                 </picture>
                 <h3>Анна Павлова</h3>
                 <div class="instructors__card-holder">
@@ -163,7 +174,8 @@
                   <source type="image/webp"
                     srcset="img/instructors/instructor-2.webp 1x, img/instructors/instructor-2@2x.webp 2x">
                   <img class="instructors__card-img" src="img/instructors/instructor-2.jpg"
-                    srcset="img/instructors/instructor-2@2x.jpg 2x" loading="lazy" width="260" height="294" alt="Худенький мужчина в кофте скрывает свою тренерскую сущность."/>
+                    srcset="img/instructors/instructor-2@2x.jpg 2x" loading="lazy" width="260" height="294"
+                    alt="Худенький мужчина в кофте скрывает свою тренерскую сущность." />
                 </picture>
                 <h3>Алексей Лавров</h3>
                 <div class="instructors__card-holder">
@@ -180,7 +192,8 @@
                   <source type="image/webp"
                     srcset="img/instructors/instructor-3.webp 1x, img/instructors/instructor-3@2x.webp 2x">
                   <img class="instructors__card-img" src="img/instructors/instructor-3.jpg"
-                    srcset="img/instructors/instructor-3@2x.jpg 2x" loading="lazy" width="260" height="294" alt="Мужчина в очках смотрит в твою неспортивную душу."/>
+                    srcset="img/instructors/instructor-3@2x.jpg 2x" loading="lazy" width="260" height="294"
+                    alt="Мужчина в очках смотрит в твою неспортивную душу." />
                 </picture>
                 <h3>Александр Пашков</h3>
                 <div class="instructors__card-holder">
@@ -197,7 +210,8 @@
                   <source type="image/webp"
                     srcset="img/instructors/instructor-4.webp 1x, img/instructors/instructor-4@2x.webp 2x">
                   <img class="instructors__card-img" src="img/instructors/instructor-4.jpg"
-                    srcset="img/instructors/instructor-4@2x.jpg 2x" loading="lazy" width="260" height="294" alt="Милая девушка научит тебя тренироваться по-взрослому."/>
+                    srcset="img/instructors/instructor-4@2x.jpg 2x" loading="lazy" width="260" height="294"
+                    alt="Милая девушка научит тебя тренироваться по-взрослому." />
                 </picture>
                 <h3>Мария Кетова</h3>
                 <div class="instructors__card-holder">
@@ -214,7 +228,8 @@
                   <source type="image/webp"
                     srcset="img/instructors/instructor-1.webp 1x, img/instructors/instructor-1@2x.webp 2x">
                   <img class="instructors__card-img" src="img/instructors/instructor-1.jpg"
-                    srcset="img/instructors/instructor-1@2x.jpg 2x" loading="lazy" width="260" height="294" alt="Милая девушка с красивыми глазами."/>
+                    srcset="img/instructors/instructor-1@2x.jpg 2x" loading="lazy" width="260" height="294"
+                    alt="Милая девушка с красивыми глазами." />
                 </picture>
                 <h3>Павла Аннова</h3>
                 <div class="instructors__card-holder">
@@ -231,7 +246,8 @@
                   <source type="image/webp"
                     srcset="img/instructors/instructor-2.webp 1x, img/instructors/instructor-2@2x.webp 2x">
                   <img class="instructors__card-img" src="img/instructors/instructor-2.jpg"
-                    srcset="img/instructors/instructor-2@2x.jpg 2x" loading="lazy" width="260" height="294" alt="Худенький мужчина в кофте скрывает свою тренерскую сущность."/>
+                    srcset="img/instructors/instructor-2@2x.jpg 2x" loading="lazy" width="260" height="294"
+                    alt="Худенький мужчина в кофте скрывает свою тренерскую сущность." />
                 </picture>
                 <h3>Лавр Алексеев</h3>
                 <div class="instructors__card-holder">
@@ -248,7 +264,8 @@
                   <source type="image/webp"
                     srcset="img/instructors/instructor-3.webp 1x, img/instructors/instructor-3@2x.webp 2x">
                   <img class="instructors__card-img" src="img/instructors/instructor-3.jpg"
-                    srcset="img/instructors/instructor-3@2x.jpg 2x" loading="lazy" width="260" height="294" alt="Мужчина в очках смотрит в твою неспортивную душу."/>
+                    srcset="img/instructors/instructor-3@2x.jpg 2x" loading="lazy" width="260" height="294"
+                    alt="Мужчина в очках смотрит в твою неспортивную душу." />
                 </picture>
                 <h3>Павел Александров</h3>
                 <div class="instructors__card-holder">
@@ -265,7 +282,8 @@
                   <source type="image/webp"
                     srcset="img/instructors/instructor-4.webp 1x, img/instructors/instructor-4@2x.webp 2x">
                   <img class="instructors__card-img" src="img/instructors/instructor-4.jpg"
-                    srcset="img/instructors/instructor-4@2x.jpg 2x" loading="lazy" width="260" height="294" alt="Милая девушка научит тебя тренироваться по-взрослому."/>
+                    srcset="img/instructors/instructor-4@2x.jpg 2x" loading="lazy" width="260" height="294"
+                    alt="Милая девушка научит тебя тренироваться по-взрослому." />
                 </picture>
                 <h3>Кета Мариева</h3>
                 <div class="instructors__card-holder">
@@ -355,11 +373,15 @@
               </div>
             </div>
             <picture>
-              <source type="image/webp" media="(max-width: 767px)" srcset="img/promotion/promotion-mobile.webp 1x, img/promotion/promotion-mobile@2x.webp 2x">
-              <source type="image/webp" media="(max-width: 1199px)" srcset="img/promotion/promotion-tablet.webp 1x, img/promotion/promotion-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/promotion/promotion-desktop.webp 1x, img/promotion/promotion-desktop@2x.webp 2x">
-              <img class="promotion__img" src="img/promotion/promotion-desktop.jpg" srcset="img/promotion/promotion-desktop@2x.jpg 2x"
-                loading="lazy" width="280" height="462" alt="Девушка в синем топе и синих штанах с очень вызывающего ракурса. Хочешь увидеть больше - приходи к нам."/>
+              <source type="image/webp" media="(max-width: 767px)"
+                srcset="img/promotion/promotion-mobile.webp 1x, img/promotion/promotion-mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1199px)"
+                srcset="img/promotion/promotion-tablet.webp 1x, img/promotion/promotion-tablet@2x.webp 2x">
+              <source type="image/webp"
+                srcset="img/promotion/promotion-desktop.webp 1x, img/promotion/promotion-desktop@2x.webp 2x">
+              <img class="promotion__img" src="img/promotion/promotion-desktop.jpg"
+                srcset="img/promotion/promotion-desktop@2x.jpg 2x" loading="lazy" width="280" height="462"
+                alt="Девушка в синем топе и синих штанах с очень вызывающего ракурса. Хочешь увидеть больше - приходи к нам." />
             </picture>
           </div>
 
@@ -392,12 +414,13 @@
                   <source type="image/webp"
                     srcset="img/responses/responses.webp 1x, img/responses/responses@2x.webp 2x">
                   <img class="responses__card-img" src="img/responses/responses.png"
-                    srcset="img/responses/responses@2x.jpg 2x" loading="lazy" width="80" height="80" alt="Миниатюрка женщины с широкими плечами и мощной шеей."/>
+                    srcset="img/responses/responses@2x.jpg 2x" loading="lazy" width="80" height="80"
+                    alt="Миниатюрка женщины с широкими плечами и мощной шеей." />
                 </picture>
                 <div class="responses__card-holder">
                   <h3>Анна Орлова</h3>
-                  <p>&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры
-                    обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
+                  <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют,
+                    персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
                 </div>
               </li>
               <li class="responses__card swiper-slide">
@@ -405,12 +428,13 @@
                   <source type="image/webp"
                     srcset="img/responses/responses.webp 1x, img/responses/responses@2x.webp 2x">
                   <img class="responses__card-img" src="img/responses/responses.png"
-                    srcset="img/responses/responses@2x.jpg 2x" loading="lazy" width="80" height="80" alt="Миниатюрка женщины с широкими плечами и мощной шеей."/>
+                    srcset="img/responses/responses@2x.jpg 2x" loading="lazy" width="80" height="80"
+                    alt="Миниатюрка женщины с широкими плечами и мощной шеей." />
                 </picture>
                 <div class="responses__card-holder">
                   <h3>Василиса Жимова</h3>
-                  <p>&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры
-                    обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
+                  <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют,
+                    персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
                 </div>
               </li>
             </ul>
@@ -428,7 +452,7 @@
               <legend class="visually-hidden">Ваши данные.</legend>
               <label class="visually-hidden" for="name">Ваше имя.</label>
               <input type="text" id="name" name="name" placeholder="Имя" pattern="^[A-zА-яЁё\-\s]+$"
-              title="Используйте только буквы, '-'" autocomplete="on" required>
+                title="Используйте только буквы, '-'" autocomplete="on" required>
               <label class="visually-hidden" for="phone">Номер телефона.</label>
               <input type="tel" id="phone" name="phone" placeholder="Телефон" pattern="[0-9\+\-\(\)]+$"
                 title="Используйте только цифры, '+()-'" autocomplete="on" required>
@@ -446,7 +470,9 @@
             </li>
             <li class="contacts__item">
               <h3>Телефон:</h3>
-              <a href="tel:88005555555">8-800-555-55-55</a>
+              <div class="contacts__link-wrapper">
+                <a href="tel:88005555555">8-800-555-55-55</a>
+              </div>
             </li>
             <li class="contacts__item contacts__item--order">
               <h3>График работы:</h3>
@@ -454,7 +480,9 @@
             </li>
             <li class="contacts__item">
               <h3>Email:</h3>
-              <a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
+              <div class="contacts__link-wrapper">
+                <a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
+              </div>
             </li>
           </ul>
         </section>

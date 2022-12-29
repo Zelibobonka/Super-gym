@@ -26,19 +26,16 @@ export const initCarousels = () => {
       },
       580: {
         slidesPerView: 2,
-        slidesPerGroup: 2,
         spaceBetween: 30,
         initialSlide: 2,
       },
       1070: {
         slidesPerView: 3,
-        slidesPerGroup: 3,
         spaceBetween: 30,
         initialSlide: 2,
       },
       1200: {
         slidesPerView: 4,
-        slidesPerGroup: 4,
         spaceBetween: 40,
       },
     },

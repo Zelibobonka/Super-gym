@@ -1180,14 +1180,8 @@ button,
 }
 
 .main-header__contact-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
 }
 
 .main-header__contact {
@@ -1273,11 +1267,14 @@ button,
   letter-spacing: 0.05em;
 }
 
-.intro__text p {
+.intro__text-wrapper {
   position: absolute;
   top: 122px;
   left: -127px;
   width: 113px;
+}
+
+.intro__text-wrapper p {
   margin: 0;
   font-size: 14px;
   line-height: 1.5;
@@ -1584,6 +1581,7 @@ button,
 .subscription__price b {
   margin-left: 10px;
   font-size: 60px;
+  font-weight: 400;
   color: #102654;
 }
 
@@ -1945,7 +1943,6 @@ button,
 }
 
 .advantages__count-text {
-  display: block;
   margin: -10px 0 0;
   font-size: 71px;
   font-weight: 700;
@@ -2356,6 +2353,11 @@ button,
   opacity: 0.5;
 }
 
+.contacts__link-wrapper {
+  display: -ms-grid;
+  display: grid;
+}
+
 .main-footer {
   display: -ms-grid;
   display: grid;
@@ -2412,13 +2414,12 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-column-gap: 11px;
+  -moz-column-gap: 11px;
+  column-gap: 11px;
   margin: 0;
   padding: 0;
   list-style-type: none;
-}
-
-.social__item:not(:last-child) {
-  margin-right: 11px;
 }
 
 .social__link {
@@ -2510,6 +2511,23 @@ button,
   }
 }
 
+@media (max-width: 1330px) {
+  .main-header__contact-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .intro {
+    padding: 65px var(--side-offset) 82px 183px;
+  }
+}
+
 @media (max-width: 1199px) {
   :root {
     --side-offset: 45px;
@@ -2555,7 +2573,7 @@ button,
     letter-spacing: 0.02em;
   }
 
-  .intro__text p {
+  .intro__text-wrapper {
     top: 89px;
     left: -138px;
   }
@@ -2705,7 +2723,6 @@ button,
     -webkit-column-gap: 29px;
     -moz-column-gap: 29px;
     column-gap: 29px;
-    max-width: 292px;
     margin: 0 auto;
     padding: 51px 45px;
   }
@@ -3029,7 +3046,7 @@ button,
     letter-spacing: 0.04em;
   }
 
-  .intro__text p {
+  .intro__text-wrapper {
     top: 78px;
     left: -1px;
   }
