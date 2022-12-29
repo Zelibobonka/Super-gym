@@ -37,16 +37,16 @@
   grid-template-columns: auto auto;
   gap: 28px;
   min-height: 242px;
-  padding: 62px 62px 55px;
+  padding: 62px 54px 55px 62px;
   background-color: $color-resolution-blue;
 
   @media (max-width: $vp-1199) {
-    padding: 62px 65px 55px;
+    padding: 62px 57px 55px 65px;
   }
 
   @media (max-width: $vp-767) {
     display: block;
-    padding: 48px 25px 34px;
+    padding: 48px 17px 34px 25px;
   }
 }
 
@@ -61,6 +61,8 @@
 }
 
 .responses__card-holder {
+  overflow: auto;
+
   h3 {
     margin: 0 0 19px;
     font-size: 20px;
@@ -77,13 +79,24 @@
   }
 
   p {
+    height: 90px;
     margin: 0;
     font-size: 16px;
     line-height: 1.4;
     color: $color-default-white;
+    overflow: auto;
 
     @media (max-width: $vp-767) {
+      height: 120px;
       text-align: center;
+    }
+
+    @media (max-width: 553px) {
+      height: 140px;
+    }
+
+    @media (max-width: 388px) {
+      height: 180px;
     }
   }
 }

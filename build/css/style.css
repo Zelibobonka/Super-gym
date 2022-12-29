@@ -2198,8 +2198,12 @@ button,
   grid-template-columns: auto auto;
   gap: 28px;
   min-height: 242px;
-  padding: 62px 62px 55px;
+  padding: 62px 54px 55px 62px;
   background-color: #1c3374;
+}
+
+.responses__card-holder {
+  overflow: auto;
 }
 
 .responses__card-holder h3 {
@@ -2211,10 +2215,12 @@ button,
 }
 
 .responses__card-holder p {
+  height: 90px;
   margin: 0;
   font-size: 16px;
   line-height: 1.4;
   color: #ffffff;
+  overflow: auto;
 }
 
 .feedback {
@@ -2937,7 +2943,7 @@ button,
   }
 
   .responses__card {
-    padding: 62px 65px 55px;
+    padding: 62px 57px 55px 65px;
   }
 
   .feedback {
@@ -3334,7 +3340,7 @@ button,
 
   .responses__card {
     display: block;
-    padding: 48px 25px 34px;
+    padding: 48px 17px 34px 25px;
   }
 
   .responses__card-img {
@@ -3353,6 +3359,7 @@ button,
   }
 
   .responses__card-holder p {
+    height: 120px;
     text-align: center;
   }
 
@@ -3463,6 +3470,18 @@ button,
   .swiper-button-next::after {
     width: 14px;
     height: 14px;
+  }
+}
+
+@media (max-width: 553px) {
+  .responses__card-holder p {
+    height: 140px;
+  }
+}
+
+@media (max-width: 388px) {
+  .responses__card-holder p {
+    height: 180px;
   }
 }
 

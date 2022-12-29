@@ -1,5 +1,4 @@
 const tabLinks = document.querySelectorAll('.subscription__item-time');
-const tabContent = document.querySelectorAll('.subscription__price, .subscription__subtitle');
 
 const initTabs = () => {
   tabLinks.forEach((el) => {
@@ -10,6 +9,9 @@ const initTabs = () => {
 
   function openTabs(el) {
     if (el.code === 'Enter' || el.code === 'Space' || el.button === 0) {
+      const tabLink = document.querySelectorAll('.subscription__item-time');
+      const tabContent = document.querySelectorAll('.subscription__price, .subscription__subtitle');
+
       const btnTarget = el.currentTarget;
       const time = btnTarget.dataset.time;
 
@@ -19,7 +21,7 @@ const initTabs = () => {
         elem.classList.remove('active');
       });
 
-      tabLinks.forEach((elem) => {
+      tabLink.forEach((elem) => {
         elem.classList.remove('active');
       });
 
